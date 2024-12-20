@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="./scripts/script.js"></script>
 </head>
 <body>
+    <h1>TIC TAC TOE</h1>
+    <div id="status">Spieler X ist dran.</div>
+    <div class="board">
+        <div class="cell" id="cell-0" onclick="handleClick(0)"></div>
+        <div class="cell" id="cell-1" onclick="handleClick(1)"></div>
+        <div class="cell" id="cell-2" onclick="handleClick(2)"></div>
+        <div class="cell" id="cell-3" onclick="handleClick(3)"></div>
+        <div class="cell" id="cell-4" onclick="handleClick(4)"></div>
+        <div class="cell" id="cell-5" onclick="handleClick(5)"></div>
+        <div class="cell" id="cell-6" onclick="handleClick(6)"></div>
+        <div class="cell" id="cell-7" onclick="handleClick(7)"></div>
+        <div class="cell" id="cell-8" onclick="handleClick(8)"></div>
+    </div>
+    <button onclick="resetGame()">Neues Spiel</button>
     
 </body>
+
 </html>

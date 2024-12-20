@@ -1,1 +1,94 @@
+/* Allgemeine Einstellungen */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #323232;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
 
+/* Header */
+h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#status {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+/* Spielfeld */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 120px); /* 3 Spalten */
+    grid-template-rows: repeat(3, 120px);    /* 3 Reihen */
+    margin: 20px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell {
+    width: 120px;
+    height: 120px;
+    /* background-color: #444; */
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: transparent; /* Anfangszustand */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0; /* Entferne Standardränder */
+    box-sizing: border-box;
+    border-right: 5px solid #fff; /* Linie rechts */
+    border-bottom: 5px solid #fff; /* Linie unten */
+}
+
+/* Spezifische Kanten anpassen */
+.cell:nth-child(3n) {
+    border-right: none; /* Entferne rechte Linie in der letzten Spalte */
+}
+
+.cell:nth-last-child(-n+3) {
+    border-bottom: none; /* Entferne untere Linie in der letzten Reihe */
+}
+
+/* Farben für X und O */
+.cell.cross {
+    color: #ffc107; /* Gelb für X */
+}
+
+.cell.circle {
+    color: #00bcd4; /* Blau für O */
+}
+
+/* Hover-Effekt für leere Felder */
+.cell:hover {
+    background-color: #555;
+}
+
+/* Deaktivierte Felder */
+.cell.taken {
+    cursor: not-allowed;
+}
+
+/* Button */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
